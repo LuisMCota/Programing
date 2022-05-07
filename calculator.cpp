@@ -2,15 +2,16 @@
 #include <math.h>
 
 int main(){
-    float resultado = 1;
+
+float resultado = 1;
 float num, num1, num2;
 char operador;
 
-    printf("Ingresa operador:");
-    scanf("%c", &operador);
+printf("Ingresa operador:");
+scanf("%c", &operador);
 
-int valido = 1;
-switch (operador){
+    int valido = 1;
+    switch (operador){
         case '+':
         printf("Ingresa un numero:");
         scanf("%f", &num);

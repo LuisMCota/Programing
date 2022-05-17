@@ -1,19 +1,30 @@
 #include <iostream>
+#include <stdio.h>
+
 using namespace std;
 
 int main(){
 
-    int x,y = 20;
-    int time = 20;
+int time;
+cout << "What time it is?\n";
+cin >> time;
 
-    x = (y < 10) ? 30:40;
-    if(time < 18){
-        cout<< "Good day.\n";
-    }else{
-        cout << "Good Evening\n";
-    }
-
-cout<< "value of x:" << x << endl;
+if (time <= 11){
+    printf("Good morning!\n");  
+} else if (time > 13 && time < 18){
+    printf("Good evening!\n");
+} else if (time >= 19 && time <= 23){
+    printf("Good night\n");
+}else if (time == 00){
+    printf("Midnigth\n");
+}else{
+    printf("introduce other value:\n");
+}
 
 return 0;
 }
+
+  
+    
+
+

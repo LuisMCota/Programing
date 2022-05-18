@@ -14,13 +14,13 @@ int main(){
         return 0;
     }
 
-    cout << "Correct key\nContinue\n";
+    cout << "Correct key\n";
     double balance = 1000; 
     string choose = "";
 
     while (choose != "3"){
         
-        cout << "Available funds: " << balance << endl;
+        cout << "Available funds: $" << balance << endl;
         cout << "1. Withdraw money\n2. Deposit\n3. Exit\n Select: ";
         cin >> choose;
 
@@ -32,13 +32,14 @@ int main(){
             if (withdraw > balance || withdraw <= 0){
                 cout << "You cannot withdraw that amount!";
             }else{
-                cout << "Operation completed!" << withdraw << endl;
+                cout << "Operation completed! " << endl;
                 balance = balance - withdraw;
             }
         } else if (choose == "2"){
             double deposit;
             cout << "Money to deposit: " << endl;
             cin >> deposit;
+            cout << "Operation completed! " << endl;
             balance = balance + deposit;
             
         }else{

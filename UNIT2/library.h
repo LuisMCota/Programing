@@ -12,7 +12,7 @@ void pascalito(int n){ // función void para especificar que el puntero es unive
 
 		for (k = 1; k <= i; k++){ // ciclo for para hacer las operaciones entre los números dentro de los vectores.
 			printf("%d " , line);
-			line = line * (i - k) / k;
+			line = line * (i - k) / k; // se obtiene el coeficiente binomial de cada 
 		}
 	printf("\n"); // salto de línea entre vectores
 	}

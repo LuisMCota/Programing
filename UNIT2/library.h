@@ -17,4 +17,5 @@ void pascalito(int n){ // función void para especificar que el puntero es unive
 	printf("\n"); // salto de línea entre vectores
 	}
 }
+// esta es una librería con la función del triángulo de pascal, en donde cada linea se va a ir ejecutando por medio de bucles for.
 

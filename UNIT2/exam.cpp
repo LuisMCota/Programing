@@ -12,5 +12,6 @@ int main(){
 
 return 0;
 }
-
+// aquí tenemos la estructura de nuestro código general, en donde se especifica primero el numero de lineas y después 
+// mandamos a llamar a la función creada en la librería y finalmente se va a ejecutar dependiendo la entrada del usuario.
 

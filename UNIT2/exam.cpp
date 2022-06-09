@@ -1,5 +1,5 @@
 #include <iostream> //incluímos las librerías
-#include "library.h"
+#include "library.h" //incluímos la librería con la función que creamos llamada pascalito.
 using namespace std; //namespace for cout
 
 

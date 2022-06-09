@@ -5,8 +5,7 @@ int i, j, k; //Declaramos variables universales de tipo entero.
 void pascalito(int n){ // función void para especificar que el puntero es universal
 
 	for (i = 1; i <= n; i++){ // ciclo for para incrementar el numero de lineas de acuerdo al valor ingresado por el usuario.
-		int line = 1; 
-
+        int line = 1;
 		for (j = 1; j < (n - i + 1); j++){ //ciclo for para imprimir las líneas o vectores en forma triángular.
 			printf(" ");
 		}

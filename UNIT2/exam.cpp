@@ -3,6 +3,10 @@
 using namespace std; //namespace for cout
 
 
+/**
+Me la pelan owo
+
+***/
 int main(){ 
 
 	int n;

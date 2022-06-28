@@ -1,6 +1,6 @@
 /*
 KARINA CAMPOS
-LUIS MONTERRUBIO
+lUIS MONTERRUBIO
 */
 #include<iostream>
 #include<stdio.h>
@@ -8,18 +8,18 @@ LUIS MONTERRUBIO
 
 using namespace std;
 
-int cols = 2; //el numero de columnas fijas
 int main(){
 	
-	string** libros; //inicializando la matriz con punteros
-	string entrada; //declaro la variable de entrada
-	string titulo,autor;
-	int size = stoi(entrada);
-	libros = new string*[size]; //dasignar el numero de filas segun el usuario
-
+	int cols = 2; 
+	string** libros;
+	int size;
 	cout<<"Cuantos libros debe ingresar? \n";
-	getline(cin, entrada); //se asigna el valor ingresado
+	string entrada; 
+	getline(cin, entrada); 
+	size = stoi(entrada); 
+	libros = new string*[size]; 
 	cout<<"Ingrese la siguiente informacion de los libros: \n";
+	string titulo,autor;
 	
 	for(int i=0; i<size; i++){
 		
@@ -28,20 +28,20 @@ int main(){
 		cout<<"titulo: ";
 		getline(cin,titulo);
 		cout<<"autores: ";
-		getline(cin,autor); //se asigna el valor 
+		getline(cin,autor); 
 		libros[i][0] = titulo;
 		libros[i][1] = autor;
-
-		int position;
-		cout << "Que libro desea encontrar? " << endl;
-		cin >> position;
-		for (int i = 0; i < size; i++){
-			cout << titulo;
-		}
 	}
-	/*encontrar libro en base a la posicion con punteros*/
+
+	int posicion ;
+	string *direcciondelibro;
+	cout << "Escribe el titulo del libro que deseas encontrar: ";
+	cin >> posicion;
+	direcciondelibro = libros [posicion];
+
+	cout << "El libro seleccionado es  " + *(direcciondelibro) + "  de " +  *(direcciondelibro+1)  << endl ;
+
 	system("pause");
 	return 0;
 }
-
  /* cout << str [i][0] << ' ' << *pc <<< */

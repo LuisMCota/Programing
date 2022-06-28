@@ -1,6 +1,6 @@
 /*
-Karina Campos
-Luis Monterrubio 
+KARINA CAMPOS
+LUIS MONTERRUBIO
 */
 #include<iostream>
 #include<stdio.h>
@@ -8,45 +8,40 @@ Luis Monterrubio
 
 using namespace std;
 
+int cols = 2; //el numero de columnas fijas
 int main(){
 	
-	int cols = 2; //el numero de columnas fijas
 	string** libros; //inicializando la matriz con punteros
-	int size;
-	cout<<"Cuantos libros debe ingresar?" << endl;
 	string entrada; //declaro la variable de entrada
-	getline(cin, entrada); //se asigna el valor ingresado
-	size = stoi(entrada); //transformar la entrada "string" a "entero"
-	libros = new string*[size]; //dasignar el numero de filas segun el usuario
-	cout<<"Ingrese la siguiente informacion de los libros: " << endl;
 	string titulo,autor;
-	
-	int i, j, position;
-	for(i = 0; i < size; i++){
+	int size = stoi(entrada);
+	libros = new string*[size]; //dasignar el numero de filas segun el usuario
 
+	cout<<"Cuantos libros debe ingresar? \n";
+	getline(cin, entrada); //se asigna el valor ingresado
+	cout<<"Ingrese la siguiente informacion de los libros: \n";
+	
+	for(int i=0; i<size; i++){
+		
 		libros[i] = new string[cols];
-		cout<<"\n****** Libro"<<i+1<<"********" << endl;
-		cout<<"Titulo: ";
+		cout<<"\n****** Libro"<<i+1<<"********\n";
+		cout<<"titulo: ";
 		getline(cin,titulo);
-		cout<<"Autores: ";
+		cout<<"autores: ";
 		getline(cin,autor); //se asigna el valor 
 		libros[i][0] = titulo;
 		libros[i][1] = autor;
-		cout << "Escribe el titulo del libro que deseas encontrar: "; 
-		cout << libros[i][0] << " " << *libros << libros[i][1] << "\n";
-		
+
+		int position;
+		cout << "Que libro desea encontrar? " << endl;
+		cin >> position;
+		for (int i = 0; i < size; i++){
+			cout << titulo;
+		}
 	}
-
-	//liberar la memoria debemos recorrer el array fila pro fila
-
-
+	/*encontrar libro en base a la posicion con punteros*/
 	system("pause");
 	return 0;
 }
-
-/*
-group assignment: from the previus code, using pointers, you must ask the user which book the print
-pointing the data of direction declared
-*/
 
  /* cout << str [i][0] << ' ' << *pc <<< */

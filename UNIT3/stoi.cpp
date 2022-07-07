@@ -5,6 +5,7 @@ lUIS MONTERRUBIO
 #include<iostream>
 #include<stdio.h>
 #include<string>
+#include<fstream>
 
 using namespace std;
 
@@ -53,4 +54,17 @@ int main(){
 	crear_matrix();
 	rellenarMatriz();
 	printInfo();
+}
+
+int generatefile(){
+    fstream new_file;
+    new_file.open("new_file_write.txt", ios::out);
+
+    if(!new_file){
+        cout << "No such file";
+        }else{
+            cout << "New file created";
+            new_file << "Learning File Handling";
+            new_file.close();       
+    }
 }

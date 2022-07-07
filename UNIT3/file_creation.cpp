@@ -6,17 +6,16 @@ using namespace std;
 
 int main(){
     fstream new_file;
-    new_file.open("new_file_write.txt", ios::in);
+    new_file.open("new_file_write.txt", ios::out);
 
     if(!new_file){
         cout << "No such file";
-        }else{ 
-        char ch;
-        while(!new_file.eof());{
-            new_file >> ch;
-            cout << ch;
+        }else{
+            cout << "New file created";
+            new_file << "Learning File Handling";
+            new_file.close();
         
-        }
+        
               
     }
         

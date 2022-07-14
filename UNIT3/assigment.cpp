@@ -23,8 +23,8 @@ struct datos{
 
 	FILE *fichero;
 	int i, numero = 0;
-	fichero = fopen("libros.dat", "wt");
 
+	fichero = fopen("libros.dat", "wt");
 	if(fichero == NULL)
 		printf("No se pudo encontrar el libro.\n");            
 	else{
@@ -33,7 +33,6 @@ struct datos{
             puts("NOMBRE: ");
             scanf("%s", &libro[i].nombre);
             fprintf(fichero,"NOMBRE: %s\n", libro[i].nombre);
-            getchar();
 
             puts("AUTOR: ");
             scanf("%s", &libro[i].autor);
@@ -42,7 +41,6 @@ struct datos{
             puts("AÑO: ");
             scanf("%d", &libro[i].year);
             fprintf(fichero,"AÑO: %d\n\n", libro[i].year);
-            getchar();
         }
     }
     fclose(fichero);
@@ -64,8 +62,9 @@ struct datos{
                     }
                 }
             } 
-while (numero!=0);
+        while (numero!=0);
             fclose(fichero);
+            printf("Hasta luego :)\n");
         }       
 return 0;
 }

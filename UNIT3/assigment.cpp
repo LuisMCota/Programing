@@ -1,3 +1,8 @@
+/*
+Luis Fernando Monterrubio Cota
+Karina Campos Almeida
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
